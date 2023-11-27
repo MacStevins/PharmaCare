@@ -31,14 +31,23 @@ nav {
 	background-color: rgb(153, 0, 0);
 	display: flex;
 	justify-content: center;
-	padding: .5rem;
+	padding: .5rem 1rem;
 	position: relative;
 
 	& .title {
+		align-items: center;
+		display: flex;
 		color: rgb(255, 255, 255);
 		text-decoration: none;
 		font-size: 1.2rem;
 		font-weight: 700;
+
+		& img {
+			content: url('/image/logo.png');
+			height: 2.5rem;
+			padding-right: .7rem;
+			width: 2.5rem;
+		}
 	}
 	& .search {
 		display: flex;
@@ -51,7 +60,7 @@ nav {
 		& input {
 			border: .15rem solid rgb(175, 175, 175);
 			border-radius: .5rem;
-			height: 2.5rem;
+			height: 2.3rem;
 			font-size: 1.1rem;
 			outline: none;
 			padding: 0 .5rem;
