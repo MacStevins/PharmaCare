@@ -1,0 +1,83 @@
+html {
+	font-family: Roboto;
+	font-size: 14px;
+	min-height: 100%;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+body {
+	margin: 0;
+
+	&[account="true"] {
+		& nav {
+			& .search * {
+				display: block;
+			}
+			& .account {
+				content: url('/image/account-login.svg');
+			}
+		}
+	}
+}
+
+nav {
+	align-items: center;
+	background-color: rgb(153, 0, 0);
+	display: flex;
+	justify-content: center;
+	padding: .5rem;
+	position: relative;
+
+	& .title {
+		color: rgb(255, 255, 255);
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+	& .search {
+		display: flex;
+		margin: auto;
+
+		& * {
+			display: none;
+			margin: auto .25rem;
+		}
+		& input {
+			border: .15rem solid rgb(175, 175, 175);
+			border-radius: .5rem;
+			height: 2.5rem;
+			font-size: 1.1rem;
+			outline: none;
+			padding: 0 .5rem;
+			transition: ease .1s;
+			width: 25rem;
+
+			&:focus {
+				border-color: rgb(63, 63, 63);
+			}
+		}
+		& button {
+			background: no-repeat center url('/image/search.svg');
+			background-size: contain;
+			border: none;
+			cursor: pointer;
+			height: 1.7rem;
+			width: 1.7rem;
+		}
+	}
+	& .account {
+		content: url('/image/account-logout.svg');
+		height: 2.5rem;
+		transition: ease .1s;
+		width: 2.5rem;
+	}
+	& .account:hover {
+		filter: invert(.25);
+	}
+}
