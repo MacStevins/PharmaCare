@@ -1,0 +1,18 @@
+{
+	"$schema": 1,
+	"id": 2,
+	"name": "Pharmacy 2",
+	"location": [
+		14.517342803302036,
+		121.05819244994166
+	],
+	"inventory": [
+		{
+			"id": 1,
+			"brand": "RiteMED",
+			"generic": "Amlodipine Besilate",
+			"image": "/image/medicines/amlodipine.png",
+			"quantity": 100
+		}
+	]
+}
