@@ -1,0 +1,40 @@
+{
+	"medicines": [
+		{
+			"medicineID": 1,
+			"brand": "RiteMED",
+			"name": "Cetirizine",
+			"formulation": "Cetirizine Dihydrochloride",
+			"imageSrc": "/data/image/medicines/rm-cetirizine.jpg",
+			"price": 16,
+			"quantity": [
+				{
+					"pharmacyID": 1,
+					"quantity": 17
+				},
+				{
+					"pharmacyID": 2,
+					"quantity": 42
+				}
+			]
+		},
+		{
+			"medicineID": 2,
+			"brand": "Pfizer",
+			"name": "Advil",
+			"formulation": "Ibuprofen",
+			"imageSrc": "/data/image/medicines/pf-advil.jpg",
+			"price": 13,
+			"quantity": [
+				{
+					"pharmacyID": 1,
+					"quantity": 58
+				},
+				{
+					"pharmacyID": 2,
+					"quantity": 18
+				}
+			]
+		}
+	]
+}

@@ -5,6 +5,7 @@ body {
 	&[account="true"] {
 		& nav {
 			& .account {
+				display: block;
 			}
 			& .search * {
 				display: none;
@@ -16,7 +17,7 @@ body {
 html {
 	font-family: Roboto;
 	font-size: 14px;
-	min-height: 100%;
+	height: 100vh;
 	position: relative;
 }
 
@@ -25,15 +26,18 @@ main {
 }
 
 nav {
-	align-items: center;
 	background-color: #1F439A;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	padding: .5rem 1rem;
-	position: relative;
-
+	
 	& .account {
+		display: none;
+		align-self: center;
+		background: no-repeat center url('/image/account-login.svg');
+		background-size: contain;
 		height: 2.5rem;
+		justify-self: right;
 		transition: ease .1s;
 		width: 2.5rem;
 	}
@@ -41,19 +45,24 @@ nav {
 		filter: invert(.25);
 	}
 	& .search {
-		display: flex;
-		margin: auto;
-
-		& * {
-			margin: auto .25rem;
-		}
+		align-items: center;
+		display: grid;
+		gap: .7rem;
+		grid-template-columns: repeat(2, auto);
+		justify-self: center;
+		width: fit-content;
+		
 		& button {
 			background: no-repeat center url('/image/search.svg');
 			background-size: contain;
 			border: none;
 			cursor: pointer;
 			height: 1.7rem;
+			transition: ease .1s;
 			width: 1.7rem;
+		}
+		& button:hover {
+			filter: invert(.125);
 		}
 		& input {
 			border: .15rem solid rgb(175, 175, 175);
@@ -72,30 +81,28 @@ nav {
 	}
 	& .title {
 		align-items: center;
-		display: flex;
+		display: grid;
 		color: rgb(255, 255, 255);
 		font-family: Oswald;
-		text-decoration: none;
 		font-size: 1.2rem;
 		font-weight: 700;
-
+		gap: .7rem;
+		grid-template-columns: repeat(2, auto);
+		text-decoration: none;
+		width: fit-content;
+		
 		& img {
-			content: url('/image/logo.png');
 			height: 2.5rem;
-			padding-right: .7rem;
 			width: 2.5rem;
 		}
 	}
 }
 
+
 @media (min-width: 768px) {
 	html {
 		font-size: 16px;
 	}
-}
-
-.center {
-	margin: auto;
 }
 
 .item {
@@ -110,32 +117,17 @@ nav {
 		box-shadow: rgba(0, 0, 0, .1) 0px 0px 5px;
 	}
 	
-	& img.item-img {
+	& .item-img {
 		height: 10rem;
+		object-fit: contain;
 		width: 10rem;
 	}
 }
 
 .item-grid {
-	display: grid;
-	gap: 1rem;
-	/* grid-auto-columns: min-content; */
-	padding: 5rem 10rem;
-	/* width: 100%; */
-}
-
-.login {
 	display: flex;
-	padding: .5rem;
-
-	& h3 {
-		font-family: Oswald;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.section {
-	background-color: rgb(171, 171, 171);
-	border-radius: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin: 5rem;
 }

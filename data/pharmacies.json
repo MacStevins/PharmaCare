@@ -1,0 +1,14 @@
+{
+	"pharmacies": [
+		{
+			"pharmacyID": 1,
+			"name": "ABC",
+			"location": "1212908"
+		},
+		{
+			"pharmacyID": 2,
+			"name": "ABC",
+			"location": "2429176"
+		}
+	]
+}
